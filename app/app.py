@@ -47,7 +47,8 @@ def hello_world():
         new_entry_df = make_list_to_df(new_entry)
 
         # import model #
-        model = load_models()
+        #model_1 = load_models()
+        model = pickle.load(open("app/linear_reg_model.sav", "rb"))
         model_result = salary_prediction(model, new_entry_df)
         model_result_str = str(np.rint(model_result[0]))
 
