@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import numpy as np
 import pandas as pd
-import pickle
+from joblib import load
 
 app = Flask(__name__)
 
@@ -11,13 +11,6 @@ def make_list_to_df(list):
                                'Country', 'DevType', 'EdLevel'])
     df.loc[len(df)] = list
     return df
-
-
-def load_models():
-    file_name = "app/linear_reg_model.sav"
-    linear_reg_model_reloaded = pickle.load(open(file_name, 'rb'))
-
-    return linear_reg_model_reloaded
 
 
 # load the model from disk #
@@ -48,7 +41,7 @@ def hello_world():
 
         # import model #
         #model_1 = load_models()
-        model = pickle.load(open("app/linear_model.sav", "rb"))
+        model = load("model.joblib")
         model_result = salary_prediction(model, new_entry_df)
         model_result_str = str(np.rint(model_result[0]))
 
