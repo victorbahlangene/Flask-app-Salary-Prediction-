@@ -14,15 +14,15 @@ def make_list_to_df(list):
 
 
 def load_models():
-    file_name = "linear_reg_model.sav"
+    file_name = "app/linear_reg_model.sav"
     linear_reg_model_reloaded = pickle.load(open(file_name, 'rb'))
 
     return linear_reg_model_reloaded
 
 
-# load the model from disk
-filename = 'linear_reg_model.sav'
-linear_reg_model_reloaded = pickle.load(open(filename, 'rb'))
+# load the model from disk #
+#filename = 'linear_reg_model.sav'
+#linear_reg_model_reloaded = pickle.load(open(filename, 'rb'))
 
 
 def salary_prediction(model, new_data):
@@ -56,5 +56,5 @@ def hello_world():
         # return render_template("index.html", outputyearscode=yearscode, outputage=age, outputcountry=country, outputdevtype=devtype, outputeducation=education)
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# if __name__ == "__main__":
+#     app.run(debug=True)
