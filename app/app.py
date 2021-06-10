@@ -48,7 +48,7 @@ def hello_world():
 
         # import model #
         #model_1 = load_models()
-        model = pickle.load(open("app/linear_reg_model.sav", "rb"))
+        model = pickle.load(open("app/linear_model.sav", "rb"))
         model_result = salary_prediction(model, new_entry_df)
         model_result_str = str(np.rint(model_result[0]))
 
