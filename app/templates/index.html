@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+    <center>               
+        <br>
+        <form method="post" class="w-50 p-3 navbar-light bg-light">
+            <br>
+            <div class="form-group col-xs-2">
+                <input name="yearscode" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Years Coding Professionally">
+            </div>
+            <div class="form-group">
+                <input name="age" type="text" class="form-control" id="exampleFormControlInput1" placeholder="User Age">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Country</label>
+                <select name="country" class="form-control" id="exampleFormControlSelect1">
+                    <option>United States</option>
+                    <option>India</option>
+                    <option>United Kingdom</option>
+                    <option>Germany</option>
+                    <option>Canada</option>
+                    <option>Brazil</option>
+                    <option>France</option>
+                    <option>Netherlands</option>
+                    <option>Poland</option>
+                    <option>Australia</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Developer Type</label>
+                <select name="devtype" class="form-control" id="exampleFormControlSelect1">
+                    <option>back-end</option>
+                    <option>full-stack</option>
+                    <option>Database-administrator</option>
+                    <option>Academic-researcher</option>
+                    <option>Data-business-analyst</option>
+                    <option>front-end</option>
+                    <option>Designer</option>
+                    <option>desktop-enterprise-applications</option>
+                    <option>Data-scientist</option>
+                    <option>mobile</option>
+                    <option>embedded-applications-devices</option>
+                    <option>DevOps-specialist</option>
+                    <option>QA-test</option>
+                    <option>Engineering-manager</option>
+                    <option>data-Engineer</option>
+                    <option>game-Dev</option>
+                    <option>System-administrator</option>
+                    <option>Senior-executive/VP</option>
+                    <option>Product-manager</option>
+                    <option>Educator</option>
+                    <option>Engineer-site-reliability</option>
+                    <option>Scientist</option>
+                    <option>Marketing-sales-professional</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Education Level</label>
+                <select name="education" class="form-control" id="exampleFormControlSelect1">
+                    <option>Bachelors-degree</option>
+                    <option>Masters-degree</option>
+                    <option>college/university-no-degree</option>
+                    <option>High-school</option>
+                    <option>Associate-degree</option>
+                    <option>doctora-degree</option>
+                    <option>Primary/elementary-school</option>
+                    <option>Professional-degree</option>
+                    <option>no-formal-education</option>
+                </select>
+            </div>
+            <input type="submit" class="btn btn-secondary">
+            <br>
+            <br>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Salary Prediction</label>
+                <textarea disabled class="form-control" id="exampleFormControlTextarea1" rows="1">$ {{ FinalOutput }}</textarea>
+            </div>
+            
+        </form>
+    </center>
+</body>
+{% endblock %}

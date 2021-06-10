@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+    <center>
+        <form method="post">
+            <label>Enter years coding professionally</label>
+            <input name="yearscode">
+
+            <br>
+            <label>Enter age</label>
+            <input name="age">
+
+            <br>
+            <label>Enter country</label>
+            <input name="country">
+
+            <br>
+            <label>Enter type of developer</label>
+            <input name="devtype">
+
+            <br>
+            <label>Enter education level</label>
+            <input name="education">
+            <br>
+            <input type="submit">
+            <br>
+            <div>
+                <h1>Output Below</h1>
+                <h3 name="outputyearscode">{{ outputyearscode }}</h3>
+                <br>
+                <h3 name="outputage">{{ outputage }}</h3>
+                <br>
+                <h3 name="outputcountry">{{ outputcountry }}</h3>
+                <br>
+                <h3 name="outputdevtype">{{ outputdevtype }}</h3>
+                <br>
+                <h3 name="outputeducation">{{ outputeducation }}</h3>
+                <br>
+            </div>
+            
+            <h1>{{ FinalOutput }}</h1>
+        </form>
+        <br><br><br>
+
+    </center>
+</body>
+{% endblock %}
