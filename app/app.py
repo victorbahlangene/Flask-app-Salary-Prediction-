@@ -41,7 +41,7 @@ def hello_world():
 
         # import model #
         #model_1 = load_models()
-        model = load("model.joblib")
+        model = load("app/model.joblib")
         model_result = salary_prediction(model, new_entry_df)
         model_result_str = str(np.rint(model_result[0]))
 
